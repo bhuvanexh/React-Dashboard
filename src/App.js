@@ -3,14 +3,9 @@ import './App.css';
 import jwt_decode from 'jwt-decode';
 import Dashboard from './Dashboard';
 import SignIn from './SignIn'
-import images from "./images"
-
 
 
 function App() {
-  const okaa = {
-    picture: images.userPfp
-  }
 
   const [user, setUser] = React.useState({});
 
@@ -22,18 +17,21 @@ function App() {
 
 
   React.useEffect(() => {
-    /* global google */
-    google.accounts.id.initialize({
-      client_id: "1072165603404-mjl83mqm1prodtl2ocosd6iajqa8c3j1.apps.googleusercontent.com",
-      callback: handleCallbackResponse
+    setTimeout(() => {
+      /* global google */
+      google.accounts.id.initialize({
+        client_id: "1072165603404-mjl83mqm1prodtl2ocosd6iajqa8c3j1.apps.googleusercontent.com",
+        callback: handleCallbackResponse
 
-    })
+      })
 
-    google.accounts.id.renderButton(
-      document.querySelector('#signInBtn'),
-      { theme: "outline", size: "large" }
-    )
+      google.accounts.id.renderButton(
+        document.querySelector('#signInBtn'),
+        { theme: "outline", size: "large" }
+      )
+    }, 1000);
   }, [user])
+
 
   function signOut(e) {
     setUser({});
@@ -48,3 +46,4 @@ function App() {
 }
 
 export default App;
+
