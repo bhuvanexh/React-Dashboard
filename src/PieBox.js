@@ -10,11 +10,36 @@ export default function PieBox() {
         console.log(value)
     }
 
+
+    const dummyData = [
+        {
+            data:
+                [14, 31, 55]
+
+        },
+        {
+            data:
+                [45, 20, 30]
+
+
+        },
+        {
+            data:
+                [78, 28, 37],
+
+        }
+        ,
+        {
+            data:
+                [30, 15, 50]
+
+        }
+    ]
+
     return (
         <div className='bottomCard pie'>
             <p className='bottomCard--topic'>
                 <h1>Top product</h1>
-                {/* <a href='#'>May-June 2021</a> */}
                 <select
                     value={monthP}
                     onChange={handleChangeP}
@@ -29,20 +54,20 @@ export default function PieBox() {
             </p>
             <div className='pie--lower'>
                 <div className='graph--pie'>
-                    <PieGraph month={monthP} />
+                    <PieGraph month={monthP} dummyData={dummyData} />
                 </div>
                 <div className='pie--value'>
                     <p>
                         <h2 className='pieValue--item pieValue--item1 '>Basic Tees</h2>
-                        <span>55%</span>
+                        <span>{dummyData[monthP].data[0]}%</span>
                     </p>
                     <p>
                         <h2 className='pieValue--item pieValue--item2 '>Custom Short Pants</h2>
-                        <span>31%</span>
+                        <span>{dummyData[monthP].data[1]}%</span>
                     </p>
                     <p>
                         <h2 className='pieValue--item pieValue--item3 '>Super Hoodies</h2>
-                        <span>14%</span>
+                        <span>{dummyData[monthP].data[2]}%</span>
                     </p>
                 </div>
             </div>

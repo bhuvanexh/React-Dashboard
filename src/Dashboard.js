@@ -58,7 +58,6 @@ export default function Dashboard(props) {
                         <span></span>
                     </div>
                     <a href=""><img src={images.Vector} alt="" /></a>
-                    {/* <img src={images.userPfp} className="userPfp" alt="" /> */}
                     <img src={props.picture} className="userPfp" alt="" />
                 </div>
                 <div className='dashboard--right--cards' >
@@ -86,7 +85,6 @@ export default function Dashboard(props) {
                 <div className='dashboard--graph'>
                     <h1>Activities</h1>
                     <div className='graph--info'>
-                        {/* <span>May-June 2021</span> */}
                         <select
                             value={monthL}
                             onChange={handleChangeL}
@@ -102,45 +100,6 @@ export default function Dashboard(props) {
                         <span>User</span>
                     </div>
                     <div className='graph--main'>
-                        {/* <p>
-                            <span>500</span>
-                            <span></span>
-                        </p>
-                        <p>
-                            <span>400</span>
-                            <span></span>
-                        </p>
-                        <p>
-                            <span>300</span>
-                            <span></span>
-                        </p>
-                        <p>
-
-                            <span>200</span>
-                            <span></span>
-                            <svg width="881" height="98" viewBox="0 0 881 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M879 1.5C879 1.5 777 88 706.5 88C645 88 588 57.5 526.5 57.5C465 57.5 367.5 95 300.5 95C233.5 95 149.5 22.0001 95 22.0001C47.5 22.0001 1.5 96.5 1.5 96.5" stroke="#E9A0A0" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-
-                        </p>
-                        <p>
-                            <span>100</span>
-                            <span></span>
-                            <svg width="880" height="136" viewBox="0 0 880 136" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M878 76C878 76 824.5 106.5 748.5 106.5C665 106.5 626 2 543 2C460 2 407 118.5 328 118.5C249 118.5 217.5 12 154 12C79.5 12 1.5 134 1.5 134" stroke="#9BDD7C" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-
-                        </p>
-                        <p>
-                            <span>0</span>
-                            <span></span>
-                        </p>
-                        <div className='graph--X'>
-                            <span>Week 1</span>
-                            <span>Week 2</span>
-                            <span>Week 3</span>
-                            <span>Week 4</span>
-                        </div> */}
                         <LineChart month={monthL} />
 
                     </div>
